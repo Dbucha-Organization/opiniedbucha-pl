@@ -1073,9 +1073,7 @@ img {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .reviews-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+
 
     .hero {
         padding: 5rem 0;
