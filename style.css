@@ -877,6 +877,27 @@ img {
     transform: translateX(5px);
 }
 
+.footer-links i {
+    width: 24px;
+    margin-right: 0.5rem;
+    text-align: center;
+    color: var(--primary);
+    /* Optional: make icons pop a bit, or keep white/inherit */
+}
+
+/* Specific brand colors on hover (optional but nice) */
+.footer-links a:hover .fa-tiktok {
+    color: #fe2c55;
+}
+
+.footer-links a:hover .fa-facebook {
+    color: #1877f2;
+}
+
+.footer-links a:hover .fa-instagram {
+    color: #c13584;
+}
+
 .contact-info p {
     margin-bottom: 0.75rem;
     display: flex;
