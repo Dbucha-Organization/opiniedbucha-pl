@@ -100,42 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --------------------------------------------------------------------------
-    // "Load More" Simulation
-    // --------------------------------------------------------------------------
-    const loadMoreBtn = document.querySelector('.load-more-container .btn');
-    const reviewsGrid = document.querySelector('.reviews-grid');
-
-    if (loadMoreBtn && reviewsGrid) {
-        loadMoreBtn.addEventListener('click', function () {
-            const originalText = this.textContent;
-            this.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Ładowanie...';
-            this.disabled = true;
-
-            setTimeout(() => {
-                // Clone the first 2 reviews to simulate loading more
-                const templates = document.querySelectorAll('.review-card');
-                if (templates.length > 0) {
-                    const clone1 = templates[0].cloneNode(true);
-                    const clone2 = templates[1].cloneNode(true);
-
-                    // Reset animation state for new items
-                    clone1.classList.remove('active-reveal');
-                    clone2.classList.remove('active-reveal');
-
-                    reviewsGrid.appendChild(clone1);
-                    reviewsGrid.appendChild(clone2);
-
-                    // Observe new items
-                    observer.observe(clone1);
-                    observer.observe(clone2);
-                }
-
-                this.textContent = originalText;
-                this.disabled = false;
-            }, 1000);
-        });
-    }
 
     // --------------------------------------------------------------------------
     // Sticky Header Shadow
